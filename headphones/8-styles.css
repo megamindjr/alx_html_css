@@ -1,0 +1,54 @@
+/* ==========================
+   HAMBURGER MENU
+========================== */
+
+/* Hamburger icon */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  height: 3px;
+  width: 100%;
+  background-color: var(--text-dark);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+  .nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #071629;
+    width: 200px;
+    flex-direction: column;
+    text-align: center;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    z-index: 1000;
+  }
+
+  .nav a {
+    display: block;
+    padding: 15px 0;
+    color: var(--text-light);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .nav.active {
+    transform: translateX(0);
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+}
