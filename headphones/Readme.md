@@ -1,96 +1,103 @@
-# 🎧 Headphones Landing Page
+import { Facebook, Twitter, Instagram } from "lucide-react";
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
-![Responsive](https://img.shields.io/badge/Responsive-Mobile%20Friendly-green?style=for-the-badge)
+export function Footer() {
+  return (
+    <footer className="bg-[#071629] text-white pt-20 pb-8 border-t border-white/10">
+      <div className="max-w-[1000px] mx-auto px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          {/* Company Info */}
+          <div>
+            <img 
+              src="data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='16' fill='white'/%3E%3C/svg%3E" 
+              alt="Logo" 
+              className="w-10 h-10 mb-6"
+            />
+            <p className="text-white/60 text-sm">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
 
-A pixel-perfect implementation of a generic Headphone Company landing page based on a Figma design. This project focuses on exact design replication, responsive behavior, and custom styling without the use of frameworks.
+          {/* Links Column 1 */}
+          <div>
+            <h4 className="mb-6">Company</h4>
+            <ul className="space-y-3">
+              <li>
+                <a href="#about" className="hover-link text-white/70 text-sm">
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="#careers" className="hover-link text-white/70 text-sm">
+                  Careers
+                </a>
+              </li>
+              <li>
+                <a href="#press" className="hover-link text-white/70 text-sm">
+                  Press
+                </a>
+              </li>
+            </ul>
+          </div>
 
----
+          {/* Links Column 2 */}
+          <div>
+            <h4 className="mb-6">Resources</h4>
+            <ul className="space-y-3">
+              <li>
+                <a href="#blog" className="hover-link text-white/70 text-sm">
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a href="#help" className="hover-link text-white/70 text-sm">
+                  Help Center
+                </a>
+              </li>
+              <li>
+                <a href="#contact" className="hover-link text-white/70 text-sm">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
 
-## 📑 Table of Contents
-- [Overview](#overview)
-- [Design Specifications](#design-specifications)
-- [Features & Interactions](#features--interactions)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Screenshots](#screenshots)
-- [License](#license)
+          {/* Social Media */}
+          <div>
+            <h4 className="mb-6">Follow Us</h4>
+            <div className="flex gap-4">
+              <a 
+                href="#facebook" 
+                className="hover-button w-10 h-10 bg-white/10 rounded-full flex items-center justify-center"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a 
+                href="#twitter" 
+                className="hover-button w-10 h-10 bg-white/10 rounded-full flex items-center justify-center"
+                aria-label="Twitter"
+              >
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a 
+                href="#instagram" 
+                className="hover-button w-10 h-10 bg-white/10 rounded-full flex items-center justify-center"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+        </div>
 
----
+        {/* Copyright */}
+        <div className="border-t border-white/10 pt-8 text-center">
+          <p className="text-white/50 text-sm">
+            &copy; 2025 Headphones. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}
 
-## 🔍 Overview
-This project is part of the `alx_html_css` curriculum. The goal is to translate a static Figma design into a functional, responsive webpage. It demonstrates proficiency in CSS positioning, flexbox, custom font implementation, and media queries.
-
----
-
-## 🎨 Design Specifications
-
-The design adheres strictly to the provided Figma mockup.
-
-### 🔠 Typography
-The project utilizes specific custom fonts as per the design requirements:
-* **Body/Text:** [Source Sans Pro](https://fonts.google.com/specimen/Source+Sans+Pro)
-* **Headings/Display:** Spin-Cycle-OT (Custom font)
-
-### 📐 Layout
-* **Max-Width:** The main content is contained within a wrapper of `1000px` and is centered on the page.
-* **Rounding:** Float values from the design have been rounded for cleaner CSS implementation.
-
----
-
-## ⚡ Features & Interactions
-
-This webpage includes specific interactive states and responsive behaviors:
-
-### 📱 Responsiveness
-* **Mobile Layout:** The layout automatically switches to the mobile version when the screen width is **480px or less**.
-
-### 🖱️ Hover States
-* **Links:** On hover and active states, links change color to **`#FF6565`**.
-* **Buttons:** On hover and active states, buttons change opacity to **`0.9`** for a subtle interactive effect.
-
----
-
-## 💻 Technologies Used
-* **HTML5** - Semantic markup.
-* **CSS3** - Styling, Flexbox, Media Queries.
-* **Figma** - Used for design reference and asset extraction.
-
----
-
-## 🚀 Installation & Usage
-
-To view this project locally:
-
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/YOUR_USERNAME/alx_html_css.git](https://github.com/YOUR_USERNAME/alx_html_css.git)
-    ```
-
-2.  **Navigate to the project directory:**
-    ```bash
-    cd alx_html_css/headphones
-    ```
-
-3.  **Open the file:**
-    Open `index.html` in your preferred web browser.
-
----
-
-## 📸 Screenshots
-
-### Desktop View
-*(Place a screenshot of your finished desktop view here)*
-
-### Mobile View
-*(Place a screenshot of your finished mobile view here)*
-
----
-
-## 👤 Author
-* **[Your Name]** - *Initial work*
-
----
-*This project was built for educational purposes as part of the ALX Software Engineering program.*
