@@ -1,0 +1,59 @@
+/* ==========================
+   WHAT WE DO SECTION
+========================== */
+
+.what-we-do {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.what-we-do h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.wwd-description {
+    max-width: 700px;
+    margin: 0 auto 60px;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* GRID */
+.wwd-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.wwd-item {
+    text-align: center;
+}
+
+.wwd-icon {
+    font-size: 5rem;
+    color: var(--primary);
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.wwd-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.wwd-item p {
+    color: #555;
+    line-height: 1.4;
+}
+
+/* MOBILE (≤ 480px) */
+@media (max-width: 480px) {
+    .wwd-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .wwd-description {
+        padding: 0 10px;
+    }
+}
