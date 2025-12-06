@@ -1,0 +1,46 @@
+/* ==========================
+   ANIMATIONS FOR ITEMS
+========================== */
+
+/* Keyframes for fun animations */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes rotate-scale {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(10deg) scale(1.1); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Apply animation to items (continuous) */
+.animated-item {
+  animation: fade-in 1s ease forwards, bounce 2s ease-in-out infinite;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover effect for extra fun */
+.animated-item:hover {
+  animation: rotate-scale 0.6s ease forwards;
+  cursor: pointer;
+}
+
+/* Optional: stagger animations for multiple items */
+.wwd-grid .animated-item:nth-child(1),
+.results-grid .animated-item:nth-child(1) { animation-delay: 0s; }
+.wwd-grid .animated-item:nth-child(2),
+.results-grid .animated-item:nth-child(2) { animation-delay: 0.2s; }
+.wwd-grid .animated-item:nth-child(3),
+.results-grid .animated-item:nth-child(3) { animation-delay: 0.4s; }
+.wwd-grid .animated-item:nth-child(4),
+.results-grid .animated-item:nth-child(4) { animation-delay: 0.6s; }
+.wwd-grid .animated-item:nth-child(5),
+.results-grid .animated-item:nth-child(5) { animation-delay: 0.8s; }
+.wwd-grid .animated-item:nth-child(6),
+.results-grid .animated-item:nth-child(6) { animation-delay: 1s; }
